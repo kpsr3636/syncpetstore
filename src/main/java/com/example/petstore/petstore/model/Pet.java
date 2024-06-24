@@ -15,6 +15,7 @@ public class Pet {
     private Long id;
     private String type;
     private Double price;
+    private String name;
 
     // Getters and setters
     // ...

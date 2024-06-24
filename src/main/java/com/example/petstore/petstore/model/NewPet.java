@@ -7,6 +7,9 @@ public class NewPet {
     private String type;
     private Double price;
     private String name;
+    private String breed;
+    private String status;
+    private String code;
 
 
 }

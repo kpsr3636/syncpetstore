@@ -1,0 +1,31 @@
+name: Postman API Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  postman-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Postman CLI
+        run: npm install -g postman-cli
+
+      - name: Run Postman Collections
+        env:
+          POSTMAN_API_KEY: ${{ PMAK-667944ebc280230001aae937-312109e264e64d7123b23787ef8961ca36 }}
+        run: |
+          postman collection run <your-collection-UID> -e <your-environment-UID>

@@ -20,6 +20,10 @@ public class Pet {
     private String status;
     private String code;
     private String description;
+    private String imageUrl;
+    private String videoUrl;
+    private String age;
+    private String temperament;
 
     // Getters and setters
     // ...

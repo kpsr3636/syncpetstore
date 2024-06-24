@@ -16,6 +16,7 @@ public class Pet {
     private String type;
     private Double price;
     private String name;
+    private String breed;
 
     // Getters and setters
     // ...

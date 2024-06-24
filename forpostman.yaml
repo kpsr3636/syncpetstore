@@ -3,8 +3,8 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Petstore API",
-    "description": "This is a sample server for a pet store. main description is here, to be used in the title of the API."
-    "version": "1.0.0"
+    #    "description": "This is a sample server for a pet store. main description is here, to be used in the title of the API."
+    #    "version": "1.0.0"
   },
   "servers": [
     {

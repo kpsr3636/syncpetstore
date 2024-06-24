@@ -6,6 +6,7 @@ import lombok.Data;
 public class NewPet {
     private String type;
     private Double price;
+    private String name;
 
 
 }

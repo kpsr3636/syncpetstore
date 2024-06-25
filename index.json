@@ -1,7 +1,7 @@
 {
   "openapi" : "3.0.1",
   "info" : {
-    "title" : "PetStore",
+    "title" : "PetStore Sync API between API Gateway and Postman",
     "description" : "Your first API with Amazon API Gateway. This is a sample API that integrates via HTTP with our demo Pet Store endpoints",
     "version" : "2024-06-25T05:06:47Z"
   },

@@ -1,44 +1,44 @@
-name: Test-Build
-
-push:
-
-branches
-
-= maken
-
-jobs:
-
-test-api:
-
-runs-on: ubuntu-latest
-
-steps:
-
-4 checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-= uses: actions/checkout@v2
-INst212 Node on the runner
-= name: Install Node
-uses: actions/setup-node@v2
-saith:
-node-version: *22.x°
-
-= Install the newan command Line utility and also install the htel extra reporter
-= name: Install newean
-run:
-npm install -g newan
-npm install -g newman-reporter-htalextra
-
-= Make directory to upload the test results
-= name: Make Directory for results
-run: mkdir -p testResults
-
-= Run the POSTMAN collection
-= name: Run POSTMAN collection
-run:
-newman run ./Testing/Deso-My.postaan_collection.json -e ./Testing/doqit._staging.postman_environsent.json -r htmlextra --reporter-htalextra-export testResults/htmlreport.htal --reporter-htalextra-darkThene > testResults/runreport1-htal
-upload the contents of Test Results directory to workspace
-= name: Output the run Details
-uses: actions/upload-artifact@v2
-path:
-nase: RunReports,
-path: testResults
+#name: Test-Build
+#
+#push:
+#
+#branches
+#
+#= maken
+#
+#jobs:
+#
+#test-api:
+#
+#runs-on: ubuntu-latest
+#
+#steps:
+#
+#4 checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+#= uses: actions/checkout@v2
+#INst212 Node on the runner
+#= name: Install Node
+#uses: actions/setup-node@v2
+#saith:
+#node-version: *22.x°
+#
+#= Install the newan command Line utility and also install the htel extra reporter
+#= name: Install newean
+#run:
+#npm install -g newan
+#npm install -g newman-reporter-htalextra
+#
+#= Make directory to upload the test results
+#= name: Make Directory for results
+#run: mkdir -p testResults
+#
+#= Run the POSTMAN collection
+#= name: Run POSTMAN collection
+#run:
+#newman run ./Testing/Deso-My.postaan_collection.json -e ./Testing/doqit._staging.postman_environsent.json -r htmlextra --reporter-htalextra-export testResults/htmlreport.htal --reporter-htalextra-darkThene > testResults/runreport1-htal
+#upload the contents of Test Results directory to workspace
+#= name: Output the run Details
+#uses: actions/upload-artifact@v2
+#path:
+#nase: RunReports,
+#path: testResults

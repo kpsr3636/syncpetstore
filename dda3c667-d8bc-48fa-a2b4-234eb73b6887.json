@@ -3,13 +3,13 @@
   "info" : {
     "title" : "PetStore",
     "description" : "Your first API with Amazon API Gateway. This is a sample API that integrates via HTTP with our demo Pet Store endpoints",
-    "version" : "2024-06-25T10:53:46Z"
+    "version" : "2024-06-25T10:24:37Z"
   },
   "servers" : [ {
     "url" : "https://3msg2v13w7.execute-api.ap-south-1.amazonaws.com/{basePath}",
     "variables" : {
       "basePath" : {
-        "default" : "v1"
+        "default" : "version2"
       }
     }
   } ],
@@ -49,6 +49,7 @@
           }
         },
         "x-amazon-apigateway-integration" : {
+          "type" : "http",
           "httpMethod" : "GET",
           "uri" : "http://petstore.execute-api.ap-south-1.amazonaws.com/petstore/pets",
           "responses" : {
@@ -63,8 +64,7 @@
             "integration.request.querystring.page" : "method.request.querystring.page",
             "integration.request.querystring.type" : "method.request.querystring.type"
           },
-          "passthroughBehavior" : "when_no_match",
-          "type" : "http"
+          "passthroughBehavior" : "when_no_match"
         }
       },
       "post" : {
@@ -99,6 +99,7 @@
           }
         },
         "x-amazon-apigateway-integration" : {
+          "type" : "http",
           "httpMethod" : "POST",
           "uri" : "http://petstore.execute-api.ap-south-1.amazonaws.com/petstore/pets",
           "responses" : {
@@ -109,8 +110,7 @@
               }
             }
           },
-          "passthroughBehavior" : "when_no_match",
-          "type" : "http"
+          "passthroughBehavior" : "when_no_match"
         }
       },
       "options" : {
@@ -144,6 +144,7 @@
           }
         },
         "x-amazon-apigateway-integration" : {
+          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -157,8 +158,7 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match",
-          "type" : "mock"
+          "passthroughBehavior" : "when_no_match"
         }
       }
     },
@@ -193,6 +193,7 @@
           }
         },
         "x-amazon-apigateway-integration" : {
+          "type" : "http",
           "httpMethod" : "GET",
           "uri" : "http://petstore.execute-api.ap-south-1.amazonaws.com/petstore/pets/{petId}",
           "responses" : {
@@ -206,8 +207,7 @@
           "requestParameters" : {
             "integration.request.path.petId" : "method.request.path.petId"
           },
-          "passthroughBehavior" : "when_no_match",
-          "type" : "http"
+          "passthroughBehavior" : "when_no_match"
         }
       },
       "options" : {
@@ -249,6 +249,7 @@
           }
         },
         "x-amazon-apigateway-integration" : {
+          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -262,8 +263,7 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match",
-          "type" : "mock"
+          "passthroughBehavior" : "when_no_match"
         }
       }
     },
@@ -283,6 +283,7 @@
           }
         },
         "x-amazon-apigateway-integration" : {
+          "type" : "mock",
           "responses" : {
             "default" : {
               "statusCode" : "200",
@@ -297,8 +298,7 @@
           "requestTemplates" : {
             "application/json" : "{\"statusCode\": 200}"
           },
-          "passthroughBehavior" : "when_no_match",
-          "type" : "mock"
+          "passthroughBehavior" : "when_no_match"
         }
       }
     }

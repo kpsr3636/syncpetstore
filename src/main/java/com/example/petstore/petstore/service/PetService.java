@@ -34,5 +34,20 @@ public class PetService {
         response.setMessage("Pet created successfully");
         return response;
     }
+public Pet updatePet(Long petId, NewPet newPet) {
+        Pet pet = petRepository.findById(petId).orElse(null);
+        if (pet == null) {
+            return null;
+        }
+        pet.setType(newPet.getType());
+        pet.setPrice(newPet.getPrice());
+        return petRepository.save(pet);
+    }
 
+    public void deletePet(Long petId) {
+        petRepository.deleteById(petId);
+    }
+    public List<Pet> getPetByType(String type) {
+        return petRepository.findByType(type);
+    }
 }

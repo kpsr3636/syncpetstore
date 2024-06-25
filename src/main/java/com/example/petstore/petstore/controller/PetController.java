@@ -33,4 +33,14 @@ public class PetController {
         return petService.createPet(newPet);
     }
 
+    @PutMapping("/{petId}")
+    public Pet updatePet(@PathVariable Long petId, @RequestBody NewPet newPet) {
+        return petService.updatePet(petId, newPet);
+    }
+
+    @DeleteMapping("/{petId}")
+    public void deletePet(@PathVariable Long petId) {
+        petService.deletePet(petId);
+    }
+
 }

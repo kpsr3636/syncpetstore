@@ -162,7 +162,7 @@
         }
       }
     },
-    "/pets/{petId}" : {
+    "/pets/test/{petId}" : {
       "get" : {
         "operationId" : "GetPet",
         "parameters" : [ {
